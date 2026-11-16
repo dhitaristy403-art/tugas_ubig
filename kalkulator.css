@@ -1,0 +1,66 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --pink: #e84b91;
+  --pink-dark: #c72d75;
+  --pink-soft: #fff0f6;
+  --ink: #51253b;
+  --muted: #9b7186;
+}
+body {
+  min-height: 100vh;
+  padding: 28px 16px;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: var(--ink);
+  background: linear-gradient(135deg, #ffe1ed, #fff6fa 55%, #fbd1e3);
+}
+.container { width: 100%; max-width: 720px; margin: auto; }
+.back-link { display: inline-block; margin-bottom: 15px; color: var(--pink-dark); text-decoration: none; font-weight: 700; }
+.calculator-card {
+  background: rgba(255,255,255,.94);
+  border: 1px solid #f7c6dc;
+  border-radius: 25px;
+  padding: 30px;
+  box-shadow: 0 18px 50px rgba(173, 65, 112, .15);
+}
+.heading { text-align: center; }
+.logo { margin: 0 auto 9px; width: 48px; height: 48px; display:grid; place-items:center; border-radius: 16px; background:var(--pink-soft); color:var(--pink); font-size:28px; }
+.eyebrow { color:var(--pink); font-size:10px; font-weight:800; letter-spacing:2px; }
+h1 { margin-top:5px; font-size:30px; color:#682a49; }
+.subtitle { margin:8px auto 22px; max-width:430px; color:var(--muted); font-size:13px; line-height:1.6; }
+.photo-section { display:flex; justify-content:center; align-items:center; gap:15px; padding:16px; background:#fff7fa; border:1px dashed #efb0cc; border-radius:16px; margin-bottom:22px; }
+.photo-frame { width:76px; height:76px; flex-shrink:0; display:grid; place-items:center; overflow:hidden; border-radius:50%; background:#ffe5f0; color:var(--pink); font-size:28px; border:3px solid #f3a8c8; }
+.photo-frame img { width:100%; height:100%; object-fit:cover; }
+.photo-action { display:flex; flex-direction:column; gap:5px; }
+#fotoSiswa { display:none; }
+.upload-button { cursor:pointer; display:inline-block; width:max-content; padding:8px 14px; color:white; background:var(--pink); border-radius:9px; font-size:12px; font-weight:700; }
+.photo-action small { color:var(--muted); font-size:11px; }
+.field { display:flex; flex-direction:column; gap:7px; margin-bottom:14px; }
+.field label { color:#713650; font-size:12px; font-weight:700; }
+.field input { width:100%; padding:12px 13px; border:1px solid #f0c5d8; border-radius:10px; background:#fffafd; outline:none; color:var(--ink); font-size:14px; }
+.field input:focus { border-color:var(--pink); box-shadow:0 0 0 3px #ffe5f0; }
+.section-title { display:flex; align-items:center; gap:8px; margin:22px 0 13px; color:#713650; font-size:14px; font-weight:800; }
+.section-title span { color:var(--pink); font-size:20px; }
+.grade-grid { display:grid; grid-template-columns:1fr 1fr; gap:0 14px; }
+.calculate-button { width:100%; border:0; border-radius:12px; padding:14px; margin-top:8px; color:white; background:linear-gradient(90deg,#e94f96,#c92f78); font-size:14px; font-weight:800; cursor:pointer; box-shadow:0 7px 16px #e94f9633; }
+.calculate-button:hover { filter:brightness(1.04); transform:translateY(-1px); }
+.result-card { margin-top:22px; padding:20px; border-radius:17px; background:#fff2f7; border:1px solid #f4c2d8; }
+.result-top { display:flex; justify-content:space-between; align-items:center; gap:12px; }
+.result-label { color:var(--pink); font-size:9px; font-weight:900; letter-spacing:1.5px; }
+.result-top h2 { margin-top:5px; font-size:20px; }
+#hasilKelas { margin-top:3px; color:var(--muted); font-size:12px; }
+.grade-circle { width:66px; height:66px; flex-shrink:0; display:flex; flex-direction:column; align-items:center; justify-content:center; border-radius:50%; background:white; border:3px solid #ed8db8; color:var(--pink-dark); }
+.grade-circle span { font-size:24px; font-weight:900; line-height:1; }
+.grade-circle small { margin-top:3px; font-size:8px; }
+.average-box { display:flex; align-items:center; justify-content:space-between; margin:17px 0 12px; padding:13px; border-radius:11px; background:white; color:var(--muted); font-size:12px; }
+.average-box strong { color:#bd2f70; font-size:24px; }
+.result-details { padding:4px 2px; }
+.result-details p { display:flex; justify-content:space-between; gap:10px; padding:9px 0; border-bottom:1px solid #f3d5e2; font-size:12px; }
+.result-details p span { color:var(--muted); }
+.result-details strong { color:#713650; }
+.message { margin-top:13px; padding:10px; text-align:center; border-radius:9px; background:white; color:#a52e68; font-size:12px; font-weight:700; }
+footer { margin-top:18px; text-align:center; color:#a77b90; font-size:10px; line-height:1.5; }
+@media(max-width:520px) {
+  .calculator-card { padding:22px 17px; }
+  h1 { font-size:25px; }
+  .grade-grid { grid-template-columns:1fr; }
+}

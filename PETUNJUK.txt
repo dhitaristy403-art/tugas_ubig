@@ -1,0 +1,23 @@
+PROJECT TYASS - KALKULATOR RAPOR PINK
+
+File utama:
+- index.html : halaman profil lama, ditambah tautan ke kalkulator
+- kalkulator.html : halaman kalkulator rapor
+- kalkulator.css : desain pink kalkulator
+- kalkulator.js : JavaScript interaktif kalkulator
+- js/latihan.js : praktik JavaScript sesuai Kegiatan Pembelajaran 1-5 modul
+- js/logika.js : file tugas logika terpisah
+
+Cara menjalankan:
+1. Ekstrak ZIP ini.
+2. Buka folder tyass_kalkulator_rapor di VS Code.
+3. Klik kanan index.html atau kalkulator.html, pilih Open with Live Server.
+4. Dari profil, klik "Buka Kalkulator Rapor".
+5. Isi nama, kelas, nilai tugas, UTS, UAS, dan kehadiran, lalu klik Hitung Nilai.
+
+Catatan:
+- Foto bersifat opsional. Klik "Pilih Foto" untuk memilih foto dari laptop/HP.
+- KKM = 75.
+- Predikat: A >= 90, B >= 80, C >= 70, D < 70.
+- Sertifikat memenuhi syarat jika lulus KKM dan kehadiran minimal 80%.
+- js/latihan.js dan js/logika.js ditautkan ke index.html dengan defer untuk latihan Console.

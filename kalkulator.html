@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalkulator Rapor | Tyass</title>
+  <link rel="stylesheet" href="kalkulator.css">
+  <script src="kalkulator.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <a class="back-link" href="index.html">← Kembali ke Profil</a>
+    <section class="calculator-card">
+      <header class="heading">
+        <div class="logo">✿</div>
+        <p class="eyebrow">STUDENT GRADE CALCULATOR</p>
+        <h1>Kalkulator Rapor</h1>
+        <p class="subtitle">Hitung rata-rata, predikat, dan status kelulusanmu dengan mudah.</p>
+      </header>
+
+      <div class="photo-section">
+        <div class="photo-frame">
+          <img id="previewFoto" alt="Foto siswa" hidden>
+          <span id="photoPlaceholder">📷</span>
+        </div>
+        <div class="photo-action">
+          <label for="fotoSiswa" class="upload-button">Pilih Foto</label>
+          <input type="file" id="fotoSiswa" accept="image/*">
+          <small>Masukkan foto sendiri (opsional).</small>
+        </div>
+      </div>
+
+      <form id="formRapor">
+        <div class="field">
+          <label for="namaSiswa">Nama siswa</label>
+          <input type="text" id="namaSiswa" placeholder="Masukkan nama lengkap" required>
+        </div>
+        <div class="field">
+          <label for="kelasSiswa">Kelas</label>
+          <input type="text" id="kelasSiswa" placeholder="Contoh: X RPL 2" required>
+        </div>
+
+        <div class="section-title"><span>✧</span> Masukkan Nilai</div>
+        <div class="grade-grid">
+          <div class="field">
+            <label for="nilaiTugas">Nilai Tugas</label>
+            <input type="number" id="nilaiTugas" min="0" max="100" placeholder="0 - 100" required>
+          </div>
+          <div class="field">
+            <label for="nilaiUts">Nilai UTS</label>
+            <input type="number" id="nilaiUts" min="0" max="100" placeholder="0 - 100" required>
+          </div>
+          <div class="field">
+            <label for="nilaiUas">Nilai UAS</label>
+            <input type="number" id="nilaiUas" min="0" max="100" placeholder="0 - 100" required>
+          </div>
+          <div class="field">
+            <label for="kehadiran">Kehadiran (%)</label>
+            <input type="number" id="kehadiran" min="0" max="100" placeholder="0 - 100" required>
+          </div>
+        </div>
+        <button type="submit" class="calculate-button">Hitung Nilai ✨</button>
+      </form>
+
+      <section id="hasilRapor" class="result-card" aria-live="polite" hidden>
+        <div class="result-top">
+          <div>
+            <p class="result-label">HASIL PERHITUNGAN</p>
+            <h2 id="hasilNama">Nama Siswa</h2>
+            <p id="hasilKelas"></p>
+          </div>
+          <div class="grade-circle">
+            <span id="hasilPredikat">-</span>
+            <small>Predikat</small>
+          </div>
+        </div>
+        <div class="average-box">
+          <span>Nilai rata-rata</span>
+          <strong id="hasilRata">0</strong>
+        </div>
+        <div class="result-details">
+          <p><span>Status KKM</span><strong id="hasilStatus">-</strong></p>
+          <p><span>Kehadiran</span><strong id="hasilHadir">-</strong></p>
+          <p><span>Sertifikat</span><strong id="hasilSertifikat">-</strong></p>
+        </div>
+        <p id="pesanHasil" class="message"></p>
+      </section>
+
+      <footer>KKM: 75 · Predikat A ≥ 90, B ≥ 80, C ≥ 70, D di bawah 70</footer>
+    </section>
+  </main>
+</body>
+</html>
